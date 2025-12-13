@@ -44,7 +44,7 @@ app.put('/api/pessoas/:id', peopleController.update);
 app.delete('/api/pessoas/:id', peopleController.remove);
 
 /* ================= ROUTES ================= */
-app.use('/api/auth', authRoutes);
+app.use('/api', authRoutes);
 app.use('/api/almoxarifado', inventoryRoutes);
 app.use('/api/maquinas', inventoryRoutes);
 app.use('/api/departamentos', inventoryRoutes);
