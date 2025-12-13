@@ -58,4 +58,7 @@ app.use((req, res) => {
   });
 });
 
+console.log('[API] authRoutes:', authRoutes);
+
+
 module.exports = app;
