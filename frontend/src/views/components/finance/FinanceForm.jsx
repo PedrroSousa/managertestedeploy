@@ -31,7 +31,7 @@ const FinanceForm = ({ dataToEdit, onSuccess, onClose }) => {
     // DIRECT FETCH IMPLEMENTATION (Bypassing axios/interceptors for reliability)
     const directSave = async (payload) => {
         const token = localStorage.getItem('token');
-        const baseUrl = 'http://127.0.0.1:9090/api/finance/transactions';
+        const baseUrl = '/api/finance/transactions';
 
         const url = isEditing ? `${baseUrl}/${dataToEdit.id}` : baseUrl;
         const method = isEditing ? 'PUT' : 'POST';
