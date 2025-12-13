@@ -1,7 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 
-const authRoutes = require('../labemanager-backend/src/routes/authRoutes');
+const authRoutes = require('./authRoutes');
+
 const inventoryRoutes = require('../labemanager-backend/src/routes/inventoryRoutes');
 const financeController = require('../labemanager-backend/src/controllers/financeController');
 const eventController = require('../labemanager-backend/src/controllers/eventController');
