@@ -1,15 +1,9 @@
-const sqlite3 = require('sqlite3').verbose();
-const path = require('path');
+// src/config/db.js
+const { createClient } = require('@libsql/client');
 
-// Resolve o caminho absoluto para garantir que o banco seja encontrado/criado no lugar certo
-const dbPath = path.resolve(__dirname, '../../data/database.sqlite');
-
-const db = new sqlite3.Database(dbPath, (err) => {
-    if (err) {
-        console.error('Erro ao conectar no SQLite:', err.message);
-    } else {
-        console.log('Conectado ao banco de dados SQLite.');
-    }
+const db = createClient({
+  url: process.env.TURSO_DATABASE_URL,
+  authToken: process.env.TURSO_AUTH_TOKEN,
 });
 
 module.exports = db;
